@@ -1,0 +1,9 @@
+<!-- app/views/listings/_listing.html.erb -->
+
+<div class="listing">
+  <h2><%= listing.name %></h2>
+  <p>Guests: <%= listing.guests %></p>
+  <p>Beds: <%= listing.beds %></p>
+  <p>Baths: <%= listing.baths %></p>
+  <p>Price: <%= number_to_currency(listing.price) %></p>
+</div>

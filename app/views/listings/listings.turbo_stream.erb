@@ -1,0 +1,11 @@
+<!-- app/views/listings/listings.turbo_stream.erb -->
+
+<turbo-stream action="append" target="listings">
+  <%= render @listings %>
+</turbo-stream>
+
+<turbo-stream action="update" target="<%= dom_id(listing) %>">
+  <%= render 'listing', listing: listing %>
+</turbo-stream>
+
+<turbo-stream action="remove" target="<%= dom_id(listing) %>"></turbo-stream>
