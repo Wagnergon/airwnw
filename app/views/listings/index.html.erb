@@ -1,0 +1,10 @@
+<h1>Listings</h1>
+<% @listings.each do |listing| %>
+  <div>
+    <h3><%= listing.name %></h3>
+    <p>Guests: <%= listing.guests %></p>
+    <p>Beds: <%= listing.beds %></p>
+    <p>Baths: <%= listing.baths %></p>
+    <p>Price: $<%= listing.price %></p>
+  </div>
+<% end %>
