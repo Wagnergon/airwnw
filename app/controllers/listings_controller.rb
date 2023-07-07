@@ -7,7 +7,12 @@ class ListingsController < ApplicationController
         format.turbo_stream
       end
     end
-  
+
+    def show
+      @listing = Listing.find(params[:id])
+    end
+    
+    
     def create
       @listing = Listing.new(listing_params)
   
@@ -38,8 +43,9 @@ class ListingsController < ApplicationController
     private
   
     def listing_params
-      params.require(:listing).permit(:name, :guests, :beds, :baths, :price)
-    end
+        params.require(:listing).permit(:name, :guests, :beds, :baths, :price, :image)
+      end
+      
   end
   
   

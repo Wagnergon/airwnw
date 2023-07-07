@@ -1,0 +1,48 @@
+/* Default styles */
+.listings-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .listing-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .listing-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .listing-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .listing-info {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .listing-card {
+      padding: 5px;
+    }
+  
+    .listing-name {
+      font-size: 16px;
+    }
+  
+    .listing-image {
+      max-width: 200px;
+    }
+  
+    .listing-info {
+      font-size: 12px;
+    }
+  }
+  

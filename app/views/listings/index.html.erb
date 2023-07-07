@@ -1,10 +1,6 @@
-<h1>Listings</h1>
+<h1 class="listings-heading">Listings</h1>
+<link rel="stylesheet" href="/assets/styles.css">
+
 <% @listings.each do |listing| %>
-  <div>
-    <h3><%= listing.name %></h3>
-    <p>Guests: <%= listing.guests %></p>
-    <p>Beds: <%= listing.beds %></p>
-    <p>Baths: <%= listing.baths %></p>
-    <p>Price: $<%= listing.price %></p>
-  </div>
+  <%= render partial: 'listings/listing', locals: { listing: listing } %>
 <% end %>
