@@ -6,5 +6,6 @@ class Listing < ApplicationRecord
     validates :beds, numericality: { only_integer: true }
     validates :baths, numericality: true
     validates :price, numericality: { only_integer: true }
+    attribute :image, :string
 end
   

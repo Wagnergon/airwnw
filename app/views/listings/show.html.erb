@@ -1,0 +1,7 @@
+<h1><%= @listing.name %></h1>
+<%= image_tag @listing.image %>
+<p>Guests: <%= @listing.guests %></p>
+<p>Beds: <%= @listing.beds %></p>
+<p>Baths: <%= @listing.baths %></p>
+<p>Price: <%= number_to_currency(@listing.price) %></p>
+
