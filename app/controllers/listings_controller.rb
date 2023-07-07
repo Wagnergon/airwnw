@@ -9,7 +9,12 @@ class ListingsController < ApplicationController
     end
 
     def show
-      @listing = Listing.find(params[:id])
+      @listing = Listing.find_by(id: params[:id])
+      if @listing
+        # Listing found
+      else
+        # Listing not found, handle error (e.g., redirect or display a message)
+      end
     end
     
     

@@ -1,7 +1,7 @@
-<h1><%= @listing.name %></h1>
-<%= image_tag @listing.image %>
-<p>Guests: <%= @listing.guests %></p>
-<p>Beds: <%= @listing.beds %></p>
-<p>Baths: <%= @listing.baths %></p>
-<p>Price: <%= number_to_currency(@listing.price) %></p>
+<h1><%= @listing.name if @listing %></h1>
+<%= image_tag @listing.image if @listing %>
+<p>Guests: <%= @listing.guests if @listing %></p>
+<p>Beds: <%= @listing.beds if @listing %></p>
+<p>Baths: <%= @listing.baths if @listing %></p>
+<p>Price: <%= number_to_currency(@listing.price) if @listing %></p>
 
