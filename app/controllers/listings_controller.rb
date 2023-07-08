@@ -35,15 +35,6 @@ class ListingsController < ApplicationController
       end
     end
   
-    def destroy
-      @listing = Listing.find(params[:id])
-      @listing.destroy
-  
-      respond_to do |format|
-        format.html { redirect_to listings_path }
-        format.turbo_stream { render turbo_stream: turbo_stream.remove(@listing) }
-      end
-    end
   
     private
   
