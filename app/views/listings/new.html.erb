@@ -1,8 +1,6 @@
-<!-- app/views/listings/new.html.erb -->
-
 <div id="new-listing">
   <%= turbo_frame_tag 'new-listing' do %>
-    <%= form_with model: @listing, url: listings_path, local: true do |form| %>
+    <%= form_with model: @listing, url: listings_path, local: true, multipart: true do |form| %>
       <div class="field">
         <%= form.label :name %>
         <%= form.text_field :name %>
@@ -23,9 +21,14 @@
         <%= form.label :price %>
         <%= form.number_field :price %>
       </div>
+      <div class="field">
+        <%= form.label :image, 'Upload Image' %>
+        <%= form.file_field :image %>
+      </div>
       <div class="actions">
         <%= form.submit 'Create Listing' %>
       </div>
     <% end %>
   <% end %>
 </div>
+
