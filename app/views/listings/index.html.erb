@@ -2,7 +2,11 @@
 <link rel="stylesheet" href="/assets/styles.css">
 <%= link_to 'Create Listing', new_listing_form_path, class: 'btn btn-primary' %>
 
-
+<div class="listings-container">
 <% @listings.each do |listing| %>
+  <div class="listing-card">
   <%= render partial: 'listings/listing', locals: { listing: listing } %>
+  </div>
 <% end %>
+
+</div>
