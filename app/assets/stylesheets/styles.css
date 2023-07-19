@@ -1,48 +1,63 @@
 /* Default styles */
 .listings-heading {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.listings-container {
+  display: flex; /* Use flexbox to create a flexible container */
+  flex-wrap: wrap; /* Allow the items to wrap to the next line */
+  margin-right: -20px; /* Compensate for the margin added to listing cards */
+}
+
+.listing-card {
+  flex: 0 0 300px; /* Set a fixed width for each listing card */
+  margin-right: 20px; /* Add some spacing between listing cards */
+}
+
+/* Clear the margin-right for the last listing card in each row */
+.listing-card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.listing-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.listing-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.listing-info {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .listings-container {
+    margin-right: 0; /* Remove the negative margin on smaller screens */
   }
-  
+
   .listing-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
+    flex: 0 0 100%; /* Make each listing card take up the full width */
+    margin-right: 0;
+    margin-bottom: 20px; /* Add some spacing between listing cards */
   }
-  
+
   .listing-name {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 16px;
   }
-  
+
   .listing-image {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 10px;
+    max-width: 200px;
   }
-  
+
   .listing-info {
-    font-size: 14px;
-    margin-bottom: 5px;
+    font-size: 12px;
   }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .listing-card {
-      padding: 5px;
-    }
-  
-    .listing-name {
-      font-size: 16px;
-    }
-  
-    .listing-image {
-      max-width: 200px;
-    }
-  
-    .listing-info {
-      font-size: 12px;
-    }
-  }
-  
+}
